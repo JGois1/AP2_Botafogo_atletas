@@ -5,6 +5,9 @@ h3{
     font-size: 26px;
 }
 #container{
-    width: 700px;
+    width: 600px;
     margin-left: 20px;
+}
+img{
+    border-radius: 5px;
 }
