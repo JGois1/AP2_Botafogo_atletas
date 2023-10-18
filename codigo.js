@@ -22,7 +22,31 @@ const cria_cartao = (atleta) => {
     div_container.appendChild(container_atleta);
 }
 
-atletas.forEach((atleta) => {cria_cartao(atleta)});
+/* 4 TIPOS DIFERENTES DE LOOPS (OS 4 DÃO CERTO IGUAL) : 
+// 1º MAIS SIMPLES
+ atletas.forEach((atleta) => {cria_cartao(atleta)});
+
+// 2º WHILE, VERSÁTIL
+let indice = 0; //criando contador
+
+while (indice < atletas.length){
+    cria_cartao(atletas[indice]);
+    console.log(indice);
+    indice++;
+}
+
+// 3º MAIS UNIVERSAL
+for(let indice =0;indice < atletas.length;indice++){  // em vez de indice podemos escrever i, como no python/c++
+    cria_cartao(atletas[indice]);
+    console.log('loop for', indice);
+}
+*/
+// 4º "for of" IGUAL O DO PYTHON
+for(const atleta of atletas){
+    cria_cartao(atleta);
+    console.log('loop for of', atleta.id);
+}
+
 
 /*
 const espaco_nome = document.getElementById('nome');
